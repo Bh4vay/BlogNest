@@ -6,7 +6,7 @@ const RegisterPage = () => {
 
     async function register(e){
         e.preventDefault();
-        const response = await fetch(`http://localhost:4000/register`, {
+        const response = await fetch(`blog-nest-server-gamma.vercel.app/register`, {
             method: 'POST',
             body: JSON.stringify({username, password}),
             headers: {

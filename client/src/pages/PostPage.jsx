@@ -12,7 +12,7 @@ const PostPage = () => {
 
     async function handleDelete() {
         try {
-            const response = await fetch(`http://localhost:4000/post/${id}/delete`, {
+            const response = await fetch(`blog-nest-server-gamma.vercel.app/post/${id}/delete`, {
                 method: "DELETE",
             });
             if (response.ok) {
@@ -27,7 +27,7 @@ const PostPage = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:4000/post/${id}`)
+        fetch(`blog-nest-server-gamma.vercel.app/post/${id}`)
             .then((response) => response.json())
             .then((postInfo) => {
                 setPostInfo(postInfo);
@@ -58,7 +58,7 @@ const PostPage = () => {
             <div className="author">by @{postInfo.author.username}</div>
             <div className="image">
                 <img
-                    src={`http://localhost:4000/${postInfo.cover}`}
+                    src={`blog-nest-server-gamma.vercel.app/${postInfo.cover}`}
                     alt={postInfo.title}
                 />
             </div>
