@@ -18,7 +18,7 @@ const { default: mongoose } = require('mongoose');
 const User = require('./models/userModel');
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://blog-nest-client.vercel.app/",
     credentials: true
 }));
 
