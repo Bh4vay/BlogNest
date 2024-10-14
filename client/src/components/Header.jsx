@@ -7,7 +7,7 @@ const Header = () => {
     const navigate = useNavigate();
     const  {userInfo, setUserInfo} = useContext(UserContext)
     useEffect(() => {
-        fetch(`blog-nest-server-gamma.vercel.app/profile`, {
+        fetch(`https://blog-nest-server-gamma.vercel.app//profile`, {
             credentials: 'include'
         }).then(response => {
             response.json().then(userInfo => {
@@ -19,7 +19,7 @@ const Header = () => {
     }, [])
 
     function logout(){
-        fetch(`blog-nest-server-gamma.vercel.app/logout`,{
+        fetch(`https://blog-nest-server-gamma.vercel.app//logout`,{
             method: 'POST',
             credentials: 'include',
         })

@@ -5,7 +5,7 @@ const IndexPage = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch(`blog-nest-server-gamma.vercel.app/post`).then(response => {
+        fetch(`https://blog-nest-server-gamma.vercel.app//post`).then(response => {
             response.json().then(posts => {
                 setPosts(posts);
             });
